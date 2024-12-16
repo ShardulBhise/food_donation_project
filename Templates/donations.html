@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Donations</title>
+</head>
+<body>
+    <h1>Available Donations</h1>
+    <ul>
+        {% for restaurant in restaurants %}
+            <li>
+                <strong>{{ restaurant.name }}</strong> is offering 
+                <em>{{ restaurant.food }}</em> at 
+                <address>{{ restaurant.address }}</address>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>
